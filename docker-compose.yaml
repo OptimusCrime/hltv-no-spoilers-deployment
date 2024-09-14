@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+
+  ###############################################
+  #                     Go                      #
+  ###############################################
+
+  hltv-no-spoilers-go-prod:
+    image: "ghcr.io/optimuscrime/hltv-no-spoilers/hltv-no-spoilers-go:latest"
+    restart: unless-stopped
+    mem_limit: 64m
+    ports:
+      - "8182"
